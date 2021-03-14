@@ -1,0 +1,15 @@
+
+<form action ="{% url 'movie:function' %}" method ="post">
+    {% csrf_token %}
+    <label>"Enter Movie Name"
+    <input type="textbox" name = "movie">
+    <input type ="submit" value ="Enter">
+ </label>
+
+</form>
+
+<ul>
+  {% for key,value in json_data.items %}
+    <li>{{ key }}: {{ value }}</li>
+  {% endfor %}
+</ul>
